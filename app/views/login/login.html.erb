@@ -1,0 +1,16 @@
+<%= form_tag "/login/verify_login" do |f| %>
+    <p class="flash"><%= flash[:notice] %></p>
+    <div class="field">
+      Email
+      <%= text_field_tag :email, nil %>
+    </div>
+
+    <div class="field">
+      Password
+      <%= password_field_tag :password %>
+    </div>
+
+    <div class="actions">
+      <%= submit_tag "login" %>
+    </div>
+<% end %>
